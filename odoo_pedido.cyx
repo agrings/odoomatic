@@ -1,0 +1,14 @@
+caracter_separacao: !!python/unicode ';'
+descricao: !!python/unicode 'Aqui vai a descricao/instrucoes
+
+  MySql OK
+
+  '
+exportar: !!python/unicode 'odoo_pedido.csv'
+exportar_nomes_campos: !!python/unicode '1'
+pos_exec: !!python/unicode 'cat odoo_pedido.csv'
+resumo: !!python/unicode 'Consulta pedido odoo'
+separador_decimal: !!python/unicode ','
+sql_query: "select '>',rp.ref \nfrom sale_order so\n    left join res_partner rp on\
+  \ rp.id=so.partner_id\nwhere so.name='[numero pedido]'\n      \n"
+string_conexao_pyodbc: !!python/unicode 'DSN=OdooProd'

@@ -1,0 +1,15 @@
+Automacao de testes no Odoo usando Selenium
+
+O script odoomatic.py preenche pedidos automaticamente a partir
+de dados em um arquivo json.
+Ex: ./odoomatic.py teste.json
+
+O script  cria_json_pedido.sh cria um arquivo de dados json a 
+partir de um pedido na base de produção.
+Ex: ./cria_json_pedido.sh PV/0014412
+
+O script cria_json_todos_produtos.sh cria um arquivo json a
+partir de todos os produtos vendaveis para o cliente escolhido.
+Ex: ./cria_json_todos_produtos.sh 12345
+
+Onde 12345 eh o codigo do cliente. 

@@ -1,0 +1,22 @@
+caracter_separacao: !!python/unicode ';'
+descricao: !!python/unicode 'Aqui vai a descricao/instrucoes
+
+  MySql OK
+
+  '
+exportar: !!python/unicode 'itens_pedido_todos.csv'
+exportar_nomes_campos: !!python/unicode '1'
+pos_exec: !!python/unicode 'cat itens_pedido_todos.csv'
+resumo: !!python/unicode 'Consulta pedido odoo'
+separador_decimal: !!python/unicode ','
+sql_query: "select concat('       <\"',\n       pp.default_code,\n       '\",\"1,0\"\
+  ,\"100,00\",\"0,00\"',\n       '>,') as produtos\nfrom \n     product_product pp\
+  \ \n     left join product_template pt on pp.product_tmpl_id=pt.id\nwhere pt.sale_ok\
+  \ and pt.active \n   and substr(pp.default_code,1,3) not in ('FS0','MP0','SE0','IM0','MT0','MK0','COM')\n\
+  \   and pp.default_code not in ('1119','1142','1173','1192','1153',\n          \
+  \                     '1262','1263','1264','1261','1190','1191',\n             \
+  \                  '1199','1200','1201','1202','1214','1220'\n                 \
+  \             )\n   and pt.name not like '%DEGUST%'\n   and pt.name not like '%FLORA%'\n\
+  \   and pt.name not like '%BLUMOS%'\n   and pt.name not like '%JUNDIA%'\norder by\
+  \ pp.default_code\n"
+string_conexao_pyodbc: !!python/unicode 'DSN=OdooProd'

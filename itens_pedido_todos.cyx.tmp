@@ -1,0 +1,18 @@
+select concat('       <"',
+       pp.default_code,
+       '","1,0","100,00","0,00"',
+       '>,') as produtos
+from 
+     product_product pp 
+     left join product_template pt on pp.product_tmpl_id=pt.id
+where pt.sale_ok and pt.active 
+   and substr(pp.default_code,1,3) not in ('FS0','MP0','SE0','IM0','MT0','MK0','COM')
+   and pp.default_code not in ('1119','1142','1173','1192','1153',
+                               '1262','1263','1264','1261','1190','1191',
+                               '1199','1200','1201','1202','1214','1220'
+                              )
+   and pt.name not like '%DEGUST%'
+   and pt.name not like '%FLORA%'
+   and pt.name not like '%BLUMOS%'
+   and pt.name not like '%JUNDIA%'
+order by pp.default_code

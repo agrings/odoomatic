@@ -1,0 +1,31 @@
+{ "1" : { "description": "Bla, bla, bla",
+          "meta_data" : {
+                "1" : { "widget_name" : 'oe-field-input-8',
+                        "widget_type" : 'combobox'  },
+               
+           }
+          "data" : { "partner_ref" : "0000",
+                     "partner_name": "Name",
+                     "invoice_line": [
+                          { "1": [
+                                   { "widget_name": "oe-field-input-8",
+                                     "widget_type": "combo_box",
+                                     "value" : "01481",
+                                   },
+                                   { "widget_name": "oe-field-input-8",
+                                     "widget_type": "combo_box",
+                                     "value" : "01481",
+                                   },
+                                   { "widget_name": "oe-field-input-8",
+                                     "widget_type": "combo_box",
+                                     "value" : "01481",
+                                   },
+                                 ]
+                          },
+                     ]
+                   }
+
+        }
+
+}
+

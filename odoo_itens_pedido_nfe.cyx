@@ -1,0 +1,17 @@
+caracter_separacao: !!python/unicode ';'
+descricao: !!python/unicode 'Aqui vai a descricao/instrucoes
+
+  MySql OK
+
+  '
+exportar: !!python/unicode 'odoo_itens_pedido.csv'
+exportar_nomes_campos: !!python/unicode '1'
+pos_exec: !!python/unicode 'cat odoo_itens_pedido.csv'
+resumo: !!python/unicode 'Consulta pedido odoo'
+separador_decimal: !!python/unicode ','
+sql_query: "select concat('       <\"',\n       pp.default_code,'\",\"',\n       ol.product_uom_qty,'\"\
+  ,\"',\n       ol.price_unit,'\",\"',\n       ol.discount,'\">,') as produtos\nfrom\
+  \ sale_order so\n     left join sale_order_line ol on so.id=ol.order_id\n     left\
+  \ join product_product pp on ol.product_id=pp.id\n     left join product_template\
+  \ pt on pp.product_tmpl_id=pt.id\nwhere so.name='[numero pedido]'\n"
+string_conexao_pyodbc: !!python/unicode 'DSN=OdooNfe'
